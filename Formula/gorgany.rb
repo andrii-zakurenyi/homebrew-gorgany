@@ -5,35 +5,35 @@
 class Gorgany < Formula
   desc "Gorgany | Testing Things"
   homepage "https://github.com/andrii-zakurenyi/gorgany"
-  version "0.1.13"
+  version "0.1.15"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.13/gorgany-darwin-x64"
-      sha256 "dbefbb4d3f541d47fbb4ce0077ac81186b22f551be7f87b5dc4f041e04b8ff13"
+    if Hardware::CPU.arm?
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.15/gorgany_0.1.15_darwin_arm64"
+      sha256 "15ac76833cce6d2b3ee8fca73db6aaf646edccc498de260d3ba62eb9fb1e5c85"
 
       def install
-        bin.install "gorgany"
+        bin.install "gorgany_0.1.15_darwin_arm64" => "gorgany"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.13/gorgany-darwin-arm64"
-      sha256 "5a1d5ea2dee21b121f10cdb60e82ce866d6d815447d413b43c8d3483e1abd3cd"
+    if Hardware::CPU.intel?
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.15/gorgany_0.1.15_darwin_amd64"
+      sha256 "11f042e03ddbc20d7f109bd1e1ab87406e607ef28a9f12e96ddd6960c871aab4"
 
       def install
-        bin.install "gorgany"
+        bin.install "gorgany_0.1.15_darwin_amd64" => "gorgany"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.13/gorgany-linux-x64"
-      sha256 "f9a56c02440d68e58303254d8e372a5c06f01d4710d857352443293bfc1dc79b"
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.15/gorgany_0.1.15_linux_amd64"
+      sha256 "e8cbeb02182f494d377d927db4b2da51be8e5f2f1e49467a66c5925ade16c09d"
 
       def install
-        bin.install "gorgany"
+        bin.install "gorgany_0.1.15_linux_amd64" => "gorgany"
       end
     end
   end
