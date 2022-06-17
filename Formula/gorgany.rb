@@ -5,35 +5,35 @@
 class Gorgany < Formula
   desc "Gorgany | Testing Things"
   homepage "https://github.com/andrii-zakurenyi/gorgany"
-  version "0.1.7"
+  version "0.1.8"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.7/gorgany_0.1.7_darwin_arm64.tar.gz"
-      sha256 "5c651c99cf6bdea0e9bdcc49a3e24bc8e2722a14f29733144ca5582cf44f74d0"
+    if Hardware::CPU.intel?
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.8/gorgany_0.1.8_darwin_amd64.tar.gz"
+      sha256 "d925c0c4854dc0d0e718c20cb816b8c00fce2c8057bc09e32adce61a6f0985b2"
 
       def install
-        bin.install "v0.1.6/gorgany-darwin-arm64"
+        bin.install "v0.1.8/gorgany-darwin-x64"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.7/gorgany_0.1.7_darwin_amd64.tar.gz"
-      sha256 "f5e178354df4fc3877f74dc51c7c2ebf1a44805e75dd1e59e1a99a3b5bc822fb"
+    if Hardware::CPU.arm?
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.8/gorgany_0.1.8_darwin_arm64.tar.gz"
+      sha256 "aba1d828493a9a9ab542c2e357f6faf943546ac597380b6a40e1bb1c7e2b66d5"
 
       def install
-        bin.install "v0.1.6/gorgany-darwin-x64"
+        bin.install "v0.1.8/gorgany-darwin-arm64"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.7/gorgany_0.1.7_linux_amd64.tar.gz"
-      sha256 "9aa9d78aa6840c5270d5c51a5b901bd4f32a15ebb737c9df95e095233081d52d"
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.8/gorgany_0.1.8_linux_amd64.tar.gz"
+      sha256 "8426d153f165a5653a9f527c7ddd8e5732e2590745a1823a7ddb3b527bedf2dd"
 
       def install
-        bin.install "v0.1.6/gorgany-linux-x64"
+        bin.install "v0.1.8/gorgany-linux-x64"
       end
     end
   end
