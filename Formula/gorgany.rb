@@ -5,35 +5,35 @@
 class Gorgany < Formula
   desc "Gorgany | Testing Things"
   homepage "https://github.com/andrii-zakurenyi/gorgany"
-  version "0.1.16"
+  version "0.1.17"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.16/gorgany-darwin-x64_0.1.16_darwin_amd64"
-      sha256 "97ee71d32b2e41198a46e9898033e343d4a93daf1672197e0e67de701e94a876"
+    if Hardware::CPU.arm?
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.17/gorgany-darwin-arm64"
+      sha256 "9814be8d6e5393bcd4ea4b7d1987ec33295c89ed7398de909e38a923e40ce626"
 
       def install
-        bin.install "gorgany-darwin-x64_0.1.16_darwin_amd64" => "v0.1.16/gorgany-darwin-x64"
+        bin.install "gorgany-darwin-arm64" => "v0.1.17/gorgany-darwin-arm64"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.16/gorgany-darwin-arm64_0.1.16_darwin_arm64"
-      sha256 "a1aabe95529f291f458d8d820bfbb8688d8a8664dfef261941b3e3e31aa986b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.17/gorgany-darwin-x64"
+      sha256 "5cedd27131a14def82aa1f901dfab69a2a3db21f7cfe1144d0c1d1afd655b208"
 
       def install
-        bin.install "gorgany-darwin-arm64_0.1.16_darwin_arm64" => "v0.1.16/gorgany-darwin-arm64"
+        bin.install "gorgany-darwin-x64" => "v0.1.17/gorgany-darwin-x64"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.16/gorgany-linux-x64_0.1.16_linux_amd64"
-      sha256 "dab66c689ccc9024474c6dc0e1280dc8c232094cce0b02ab748af2723fea5af5"
+      url "https://github.com/andrii-zakurenyi/gorgany/releases/download/v0.1.17/gorgany-linux-x64"
+      sha256 "43b58bf7b5de3a4941dc31b67b021fe7d222bb4c247abc3e58c6d7a1e13e6835"
 
       def install
-        bin.install "gorgany-linux-x64_0.1.16_linux_amd64" => "v0.1.16/gorgany-linux-x64"
+        bin.install "gorgany-linux-x64" => "v0.1.17/gorgany-linux-x64"
       end
     end
   end
